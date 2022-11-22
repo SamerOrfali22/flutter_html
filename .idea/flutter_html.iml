@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android" name="Android">
+      <configuration />
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_video/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_video/build" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_video/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/example/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_audio/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_audio/build" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_audio/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_math/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_math/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_math/build" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_all/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_all/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_all/build" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_table/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_table/build" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_table/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_svg/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_svg/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_svg/build" />
+      <excludeFolder url="file://$MODULE_DIR$/build" />
+      <excludeFolder url="file://$MODULE_DIR$/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_iframe/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_iframe/build" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/flutter_html_iframe/.dart_tool" />
+    </content>
+    <orderEntry type="jdk" jdkName="Android API 33, extension level 3 Platform" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+  </component>
+</module>

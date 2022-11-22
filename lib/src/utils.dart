@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_html/style.dart';
 
@@ -20,6 +23,23 @@ Map<String, String> namedColors = {
   "Purple": "#800080",
 };
 
+Map<String, String> mathML2Tex = {
+  "sin": r"\sin",
+  "sinh": r"\sinh",
+  "csc": r"\csc",
+  "csch": r"\csch",
+  "cos": r"\cos",
+  "cosh": r"\cosh",
+  "sec": r"\sec",
+  "sech": r"\sech",
+  "tan": r"\tan",
+  "tanh": r"\tanh",
+  "cot": r"\cot",
+  "coth": r"\coth",
+  "log": r"\log",
+  "ln": r"\ln",
+};
+
 class Context<T> {
   T data;
 
@@ -38,8 +58,7 @@ class MultipleTapGestureDetector extends InheritedWidget {
   }) : super(key: key, child: child);
 
   static MultipleTapGestureDetector? of(BuildContext context) {
-    return context
-        .dependOnInheritedWidgetOfExactType<MultipleTapGestureDetector>();
+    return context.dependOnInheritedWidgetOfExactType<MultipleTapGestureDetector>();
   }
 
   @override
@@ -56,6 +75,12 @@ class CustomBorderSide {
   Color? color;
   double width;
   BorderStyle style;
+}
+
+String getRandString(int len) {
+  final random = Random.secure();
+  final values = List<int>.generate(len, (i) => random.nextInt(255));
+  return base64UrlEncode(values);
 }
 
 extension TextTransformUtil on String? {
@@ -86,4 +111,8 @@ extension TextTransformUtil on String? {
       return this;
     }
   }
+}
+
+extension ClampedEdgeInsets on EdgeInsetsGeometry {
+  EdgeInsetsGeometry get nonNegative => clamp(EdgeInsets.zero, const EdgeInsets.all(double.infinity));
 }

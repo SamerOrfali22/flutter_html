@@ -8,28 +8,24 @@ class InteractableElement extends StyledElement {
   String? href;
 
   InteractableElement({
-    required super.name,
-    required super.children,
-    required super.style,
+    required String name,
+    required List<StyledElement> children,
+    required Style style,
     required this.href,
     required dom.Node node,
-    required super.elementId,
-  }) : super(node: node as dom.Element?);
+    required String elementId,
+  }) : super(name: name, children: children, style: style, node: node as dom.Element?, elementId: elementId);
 }
 
 /// A [Gesture] indicates the type of interaction by a user.
 enum Gesture {
-  tap,
+  TAP,
 }
 
-StyledElement parseInteractableElement(
-  dom.Element element,
-  List<StyledElement> children,
-) {
+InteractableElement parseInteractableElement(dom.Element element, List<StyledElement> children) {
   switch (element.localName) {
     case "a":
-      if (element.attributes.containsKey('href')) {
-        return InteractableElement(
+      return InteractableElement(
           name: element.localName!,
           children: children,
           href: element.attributes['href'],
@@ -38,27 +34,16 @@ StyledElement parseInteractableElement(
             textDecoration: TextDecoration.underline,
           ),
           node: element,
-          elementId: element.id,
-        );
-      }
-      // When <a> tag have no href, it must be non clickable and without decoration.
-      return StyledElement(
-        name: element.localName!,
-        children: children,
-        style: Style(),
-        node: element,
-        elementId: element.id,
-      );
+          elementId: element.id);
 
     /// will never be called, just to suppress missing return warning
     default:
       return InteractableElement(
-        name: element.localName!,
-        children: children,
-        node: element,
-        href: '',
-        style: Style(),
-        elementId: "[[No ID]]",
-      );
+          name: element.localName!,
+          children: children,
+          node: element,
+          href: '',
+          style: Style(),
+          elementId: "[[No ID]]");
   }
 }
